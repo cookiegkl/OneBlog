@@ -2,7 +2,6 @@ package com.zyd.blog.file;
 
 import com.alibaba.fastjson.JSON;
 import com.qiniu.common.QiniuException;
-import com.qiniu.common.Region;
 import com.qiniu.http.Response;
 import com.qiniu.storage.BucketManager;
 import com.qiniu.storage.Configuration;
@@ -18,16 +17,11 @@ import java.io.InputStream;
 import java.util.Date;
 
 /**
- * Qiniu云操作文件的api：v1
- *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @version 1.0
- * @date 2018/4/16 16:26
- * @since 1.0
+ * 七牛云客户端
  */
 public class QiniuApiClient extends BaseApiClient {
 
-    private static final String DEFAULT_PREFIX = "oneblog/";
+    private static final String DEFAULT_PREFIX = "blog/";
 
     private String accessKey;
     private String secretKey;
@@ -66,7 +60,7 @@ public class QiniuApiClient extends BaseApiClient {
         //Zone.zone1:华北
         //Zone.zone2:华南
         //Zone.zoneNa0:北美
-        Configuration cfg = new Configuration(Region.autoRegion());
+        Configuration cfg = new Configuration();
         UploadManager uploadManager = new UploadManager(cfg);
         try {
             Auth auth = Auth.create(this.accessKey, this.secretKey);
@@ -102,7 +96,7 @@ public class QiniuApiClient extends BaseApiClient {
             throw new QiniuApiException("[" + this.storageType + "]删除文件失败：文件key为空");
         }
         Auth auth = Auth.create(this.accessKey, this.secretKey);
-        Configuration config = new Configuration(Region.autoRegion());
+        Configuration config = new Configuration();
         BucketManager bucketManager = new BucketManager(auth, config);
         try {
             Response re = bucketManager.delete(this.bucket, key);

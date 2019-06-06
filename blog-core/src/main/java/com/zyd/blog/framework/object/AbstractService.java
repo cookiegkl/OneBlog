@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @website https://www.zhyd.me
+ * @website #
  * @version 1.0
  * @date 2018/4/16 16:26
  * @since 1.0
@@ -13,9 +13,7 @@ public interface AbstractService<T, PK> {
 
     T insert(T entity);
 
-    default void insertList(List<T> entities) {
-
-    }
+    default void insertList(List<T> entities) { }
 
     boolean removeByPrimaryKey(PK primaryKey);
 

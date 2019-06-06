@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0
- * @website https://www.zhyd.me
+ * @website #
  * @date 2018/4/18 11:48
  * @since 1.0
  */
@@ -41,7 +41,6 @@ public class ZydWebsocketServer {
         webSocketSet.add(session);
         int count = onlineCount.incrementAndGet();
         log.info("[Socket] 有链接加入，当前在线人数为: {}", count);
-
         WebSocketUtil.sendOnlineMsg(Integer.toString(count), webSocketSet);
     }
 
@@ -58,8 +57,7 @@ public class ZydWebsocketServer {
     /**
      * 收到客户端消息后调用的方法
      *
-     * @param message
-     *         客户端发送过来的消息
+     * @param message 客户端发送过来的消息
      */
     @OnMessage
     public void onMessage(String message, Session session) {

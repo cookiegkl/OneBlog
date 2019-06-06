@@ -15,12 +15,12 @@ import java.util.Date;
 /**
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0
- * @website https://www.zhyd.me
+ * @website #
  * @date 2019/2/12 15:18
  * @since 1.8
  */
 public class AliyunOssApiClient extends BaseApiClient {
-    private static final String DEFAULT_PREFIX = "oneblog/";
+    private static final String DEFAULT_PREFIX = "blog/";
     private OssApi ossApi;
     private String url;
     private String bucketName;

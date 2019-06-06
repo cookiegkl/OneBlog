@@ -156,13 +156,13 @@
                                             <p class="info">Hello there!<br>Good Morning</p>
                                         </div>
                                         <div class="message me">
-                                            <img src="/assets/images/loading.gif">
+                                            <img src="http://localhost/blog/20190606171209389.jpg">
                                             <p class="info">Hi<br>Good Morning</p>
                                         </div>
                                         <div class="message"><img src="/assets/images/user.png">
                                             <p class="info">How are you?</p>
                                         </div>
-                                        <div class="message me"><img src="/assets/images/loading.gif">
+                                        <div class="message me"><img src="http://localhost/blog/20190606171209389.jpg">
                                             <p class="info">I'm Fine.</p>
                                         </div>-->
                                     </div>
@@ -187,7 +187,7 @@
             var msg = $("#msg").val();
             $.post("/api/notice", {msg : msg}, function (json) {
                 if (json.status == 200) {
-                    $messages.append('<div class="message me"><img src="/assets/images/loading.gif"><p class="info">' + msg + '</p></div>');
+                    $messages.append('<div class="message me"><img src="http://localhost/blog/20190606171209389.jpg"><p class="info">' + msg + '</p></div>');
                 } else {
                     if (json.message) {
                         $.alert.error(json.message);

@@ -1,9 +1,3 @@
-/**
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @version 1.0
- * @date 2018/5/21 11:05
- * @since 1.0
- */
 var zhyd = window.zhyd || {};
 zhyd.chartConfig = {
         color: ["#26B99A", "#34495E", "#BDC3C7", "#3498DB", "#9B59B6", "#8abb6f", "#759c6a", "#bfd3b7"],

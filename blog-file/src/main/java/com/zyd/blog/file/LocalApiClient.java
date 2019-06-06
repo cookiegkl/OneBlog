@@ -17,12 +17,13 @@ import java.util.Date;
 /**
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0
- * @website https://www.zhyd.me
+ * @website #
  * @date 2019/2/11 15:06
  * @since 1.8
  */
 public class LocalApiClient extends BaseApiClient {
-    private static final String DEFAULT_PREFIX = "oneblog/";
+
+    private static final String DEFAULT_PREFIX = "blog/";
 
     private String url;
     private String rootPath;
@@ -35,7 +36,6 @@ public class LocalApiClient extends BaseApiClient {
     public LocalApiClient init(String url, String rootPath, String uploadType) {
         this.url = url;
         this.rootPath = rootPath;
-
         this.pathPrefix = StringUtils.isEmpty(uploadType) ? DEFAULT_PREFIX : uploadType.endsWith("/") ? uploadType : uploadType + "/";
         return this;
     }
@@ -43,11 +43,9 @@ public class LocalApiClient extends BaseApiClient {
     @Override
     public VirtualFile uploadImg(InputStream is, String imageUrl) {
         this.check();
-
         String key = FileUtil.generateTempFileName(imageUrl);
         this.createNewFileName(key, this.pathPrefix);
         Date startTime = new Date();
-
         String realFilePath = this.rootPath + this.newFileName;
         FileUtil.checkFilePath(realFilePath);
         try (InputStream uploadIs = StreamUtil.clone(is);

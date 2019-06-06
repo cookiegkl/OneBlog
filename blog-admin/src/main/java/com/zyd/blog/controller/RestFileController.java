@@ -16,15 +16,12 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * 文件管理
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @version 1.0
- * @website https://www.zhyd.me
- * @date 2019/2/14 11:37
- * @since 1.0
+ * @author Alex
  */
 @RestController
 @RequestMapping("/file")
 public class RestFileController {
+
     @Autowired
     private BizFileService fileService;
 

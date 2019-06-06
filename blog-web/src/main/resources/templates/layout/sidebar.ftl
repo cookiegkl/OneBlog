@@ -1,15 +1,20 @@
 <div class="col-sm-3 blog-sidebar">
     <#if articleDetail?exists>
         <div class="sidebar-module">
-            <h5 class="custom-title"><i class="fa fa-hand-peace-o fa-fw icon"></i><strong>说给你听</strong><small></small></h5>
+            <h5 class="custom-title"><i class="fa fa-hand-peace-o fa-fw icon"></i><strong>说给你听</strong>
+                <small></small>
+            </h5>
             <div class="div-quote">
-                <i class="fa fa-quote-left fa-fw"></i><p id="hitokoto" style="margin-left: 15px;"></p>
+                <i class="fa fa-quote-left fa-fw"></i>
+                <p id="hitokoto" style="margin-left: 15px;"></p>
             </div>
         </div>
     <#else>
         <div class="sidebar-module" style="position: relative;">
-            <a href='https://gitee.com/yadong.zhang/DBlog' target="_blank" rel="external nofollow"><img src='https://gitee.com/yadong.zhang/DBlog/widgets/widget_1.svg?color=07b83f' alt='Fork me on Gitee' style="position: absolute;right: 0;"/></a>
-            <h5 class="custom-title"><i class="fa fa-home fa-fw icon"></i><strong>关于我</strong><small></small></h5>
+            <a href='#' target="_blank" rel="external nofollow"><img src='https://gitee.com/yadong.zhang/DBlog/widgets/widget_1.svg?color=07b83f/widgets/widget_1.svg?color=07b83f' alt='Fork me on Gitee' style="position: absolute;right: 0;"/></a>
+            <h5 class="custom-title"><i class="fa fa-home fa-fw icon"></i><strong>关于我</strong>
+                <small></small>
+            </h5>
             <div class="widget">
                 <div id="feed_widget">
                     <div class="feed-about">
@@ -21,8 +26,7 @@
                         <div class="clear"></div>
                         <!-- 方案一：图标展示 -->
                         <ul class="widget-icon">
-                            <li class="weixin auto-shake" data-container="body"
-                                data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true" data-content="<img src='${config.wxCode}' style='width: 130px;' alt='QR Code'>">
+                            <li class="weixin auto-shake" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true" data-content="<img src='${config.wxCode}' style='width: 130px;' alt='QR Code'>">
                                 <a class="tag-icon" title="微信" rel="external nofollow"><i class="fa fa-weixin"></i></a>
                             </li>
                             <li class="tqq auto-shake">
@@ -48,19 +52,21 @@
         </div>
     </#if>
     <div class="sidebar-module article-module hide" style="top: 0;">
-        <h5 class="custom-title"><i class="fa fa-book fa-fw icon"></i><strong>本文目录</strong><i class="fa fa-close pull-right close-article-menu hide pointer"></i><small></small></h5>
+        <h5 class="custom-title"><i class="fa fa-book fa-fw icon"></i><strong>本文目录</strong><i class="fa fa-close pull-right close-article-menu hide pointer"></i>
+            <small></small>
+        </h5>
         <div id="article-menu">
             <ul class="list-unstyled"></ul>
         </div>
     </div>
     <div class="sidebar-module">
-        <h5 class="custom-title"><i class="fa fa-tags fa-fw icon"></i><strong>标签云</strong><small></small></h5>
+        <h5 class="custom-title"><i class="fa fa-tags fa-fw icon"></i><strong>标签云</strong>
+            <small></small>
+        </h5>
         <@zhydTag method="tagsList" pageSize="10">
             <#if tagsList?exists && (tagsList?size > 0)>
                 <#list tagsList as item>
-                    <a style="font-size: <@zhydTag method="random" max="15" min="10">${random}</@zhydTag>px;margin: 5px;" href="${config.siteUrl}/tag/${item.id?c}" title="${item.name?if_exists}" data-toggle="tooltip" data-placement="bottom">
-                        ${item.name?if_exists}
-                    </a>
+                    <a style="font-size: <@zhydTag method="random" max="15" min="10">${random}</@zhydTag>px;margin: 5px;" href="${config.siteUrl}/tag/${item.id?c}" title="${item.name?if_exists}" data-toggle="tooltip" data-placement="bottom">${item.name?if_exists}</a>
                 </#list>
             </#if>
         </@zhydTag>
@@ -68,16 +74,19 @@
     <@zhydTag method="recentComments" pageSize="10">
         <#if recentComments?? && recentComments?size gt 0>
             <div class="sidebar-module">
-                <h5 class="custom-title"><i class="fa fa-comments fa-fw icon"></i><strong>近期评论</strong><small></small></h5>
+                <h5 class="custom-title"><i class="fa fa-comments fa-fw icon"></i><strong>近期评论</strong>
+                    <small></small>
+                </h5>
                 <ul class="list-unstyled list-inline comments">
-                <#list recentComments as item>
-                    <li>
-                        <a href="${item.sourceUrl}#comment-${item.id?c}" title="${item.briefContent?if_exists}" rel="external nofollow" data-toggle="tooltip" data-placement="bottom">
-                            <img alt="${item.nickname?if_exists}" src="${item.avatar?if_exists}" class="avatar auto-shake" height="64" width="64" onerror="this.src='${config.staticWebSite}/img/user.png'" />
-                            <span class="comment-author">${item.nickname?if_exists}</span> ${item.briefContent?if_exists}
-                        </a>
-                    </li>
-                </#list>
+                    <#list recentComments as item>
+                        <li>
+                            <a href="${item.sourceUrl}#comment-${item.id?c}" title="${item.briefContent?if_exists}"
+                               rel="external nofollow" data-toggle="tooltip" data-placement="bottom">
+                                <img alt="${item.nickname?if_exists}" src="${item.avatar?if_exists}" class="avatar auto-shake" height="64" width="64" onerror="this.src='${config.staticWebSite}/img/user.png'"/>
+                                <span class="comment-author">${item.nickname?if_exists}</span> ${item.briefContent?if_exists}
+                            </a>
+                        </li>
+                    </#list>
                 </ul>
             </div>
         </#if>
@@ -150,16 +159,18 @@
     </div>
     <div class="clear"></div>
     <div class="sidebar-module">
-        <h5 class="custom-title"><i class="fa fa-info fa-fw icon"></i><strong>网站信息</strong><small></small></h5>
+        <h5 class="custom-title"><i class="fa fa-info fa-fw icon"></i><strong>网站信息</strong>
+            <small></small>
+        </h5>
         <ul class="ul-default site-info">
             <@zhydTag method="siteInfo">
-                <li> <i class="fa fa-file fa-fw"></i>  文章总数：${siteInfo.articleCount!(0)} 篇</li>
-                <li> <i class="fa fa-tags fa-fw"></i> 标签总数：${siteInfo.tagCount!(0)} 个</li>
-                <li> <i class="fa fa-folder-open fa-fw"></i> 分类总数：${siteInfo.typeCount!(0)} 个</li>
-                <li> <i class="fa fa-comments fa-fw"></i> 留言数量：${siteInfo.commentCount!(0)} 条</li>
-                <li> <i class="fa fa-users fa-fw"></i> 在线人数：<span class="online">1</span>人</li>
-                <li> <i class="fa fa-calendar fa-fw"></i> 运行天数：${siteInfo.installdate!(1)}天</li>
-                <li> <i class="fa fa-pencil-square fa-fw"></i> 最后更新：${siteInfo.lastUpdateTime!("暂无更新记录")}</li>
+                <li><i class="fa fa-file fa-fw"></i> 文章总数：${siteInfo.articleCount!(0)} 篇</li>
+                <li><i class="fa fa-tags fa-fw"></i> 标签总数：${siteInfo.tagCount!(0)} 个</li>
+                <li><i class="fa fa-folder-open fa-fw"></i> 分类总数：${siteInfo.typeCount!(0)} 个</li>
+                <li><i class="fa fa-comments fa-fw"></i> 留言数量：${siteInfo.commentCount!(0)} 条</li>
+                <li><i class="fa fa-users fa-fw"></i> 在线人数：<span class="online">1</span>人</li>
+                <li><i class="fa fa-calendar fa-fw"></i> 运行天数：${siteInfo.installdate!(1)}天</li>
+                <li><i class="fa fa-pencil-square fa-fw"></i> 最后更新：${siteInfo.lastUpdateTime!("暂无更新记录")}</li>
             </@zhydTag>
         </ul>
     </div>

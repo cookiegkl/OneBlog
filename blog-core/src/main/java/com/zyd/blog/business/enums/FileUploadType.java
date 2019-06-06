@@ -1,17 +1,13 @@
 package com.zyd.blog.business.enums;
 
 /**
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @version 1.0
- * @website https://www.zhyd.me
- * @date 2018/4/16 16:26
- * @since 1.0
+ * @author Alex
  */
 public enum FileUploadType {
-    COMMON("oneblog/"),
-    QRCODE("oneblog/qrcode/"),
-    SIMPLE("oneblog/article/"),
-    COVER_IMAGE("oneblog/cover/");
+    COMMON("blog/"),
+    QRCODE("blog/qrcode/"),
+    SIMPLE("blog/article/"),
+    COVER_IMAGE("blog/cover/");
 
     private String path;
 

@@ -22,7 +22,7 @@
                 </ul>
             <#else>
                 <ul class="list-unstyled list-inline pull-left">
-                    <li><a href="javascript:;;" data-toggle="modal" data-target="#oauth" rel="nofollow" title="授权登录">登录</a></li>
+                    <li><a href="${config.siteUrl}/toLogin" data-toggle="modal" data-target="#oauth" rel="nofollow" title="授权登录">登录</a></li>
                 </ul>
             </#if>
         </div>
@@ -35,7 +35,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <ul class="list-inline">
                     <li><h4 class="modal-title" id="oauthTitle">登录</h4></li>
-                    <li><a href="javascript:$.alert.info('没用，别点了！我就没打算开发这个功能。Just to show you~~');"><h4 class="modal-title" id="myModalLabel">注册</h4></a></li>
+                    <li><a href="javascript:$.alert.info('功能正在建设中...');"><h4 class="modal-title" id="myModalLabel">注册</h4></a></li>
                 </ul>
             </div>
             <div class="modal-body">
@@ -52,11 +52,11 @@
                                 </#list>
                             <#else>
                                 <li>
-                                    稍等一下， 博主正在快马加鞭的配置~~
+                                    功能正在建设中...
                                 </li>
                             </#if>
                         </@zhydTag>
-                        <#--<li>
+                        <li>
                             <a href="${config.siteUrl}/oauth/render/gitee" target="">
                                 <img src="https://gitee.com/logo_icon.png" alt="" class="img-circle">
                             </a>
@@ -125,7 +125,7 @@
                             <a href="${config.siteUrl}/oauth/render/facebook" target="">
                                 <img src="https://gitee.com/yadong.zhang/static/raw/master/JustAuth/facebook.png" alt="">
                             </a>
-                        </li>-->
+                        </li>
                     </ul>
                     <div class="oauth-line">
                         <span>

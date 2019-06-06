@@ -1,9 +1,3 @@
-/**
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @version 1.0
- * @date 2018/6/7 10:48
- * @since 1.0
- */
 var $publishForm = $("#publishForm");
 
 if(articleId){
@@ -14,7 +8,7 @@ if(articleId){
             success: function (json) {
                 $.alert.ajaxSuccess(json);
                 var info = json.data;
-                // 标签, 因为标签初始化是有延迟的，所以这而赋值的时候为了防止赋值失败，亦采用延迟处理
+                // 标签, 因为标签初始化是有延迟的，所以这里赋值的时候为了防止赋值失败，亦采用延迟处理
                setTimeout(function () {
                    var tags = info.tags;
                    for(var i = 0, len = tags.length; i < len ; i ++){

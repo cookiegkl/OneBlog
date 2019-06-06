@@ -29,7 +29,7 @@
                             <#--<div class="col-md-55">
                                 <div class="thumbnail selected">
                                     <div class="image view view-first">
-                                        <img style="display: block;margin: 0 auto;margin-top: 10px;" src="/assets/images/loading.gif" alt="image" />
+                                        <img style="display: block;margin: 0 auto;margin-top: 10px;" src="http://localhost/blog/20190606171209389.jpg" alt="image" />
                                         <div class="selected-mask">
                                             <div class="inner"></div>
                                             <div class="icon"></div>
@@ -43,7 +43,7 @@
                             <div class="col-md-55">
                                 <div class="thumbnail">
                                     <div class="image view view-first">
-                                        <img style="display: block;margin: 0 auto;margin-top: 10px;" src="/assets/images/loading.gif" alt="image" />
+                                        <img style="display: block;margin: 0 auto;margin-top: 10px;" src="http://localhost/blog/20190606171209389.jpg" alt="image" />
                                     </div>
                                     <div class="caption">
                                         <p>暂无可用的图片... </p>

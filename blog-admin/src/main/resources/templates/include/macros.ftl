@@ -46,7 +46,7 @@
                 <@shiro.user>
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="/assets/images/loading.gif" alt="..." class="img-circle profile_img">
+                        <img src="http://localhost/blog/20190606171209389.jpg" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span id="hello_msg">&nbsp;</span>
@@ -71,7 +71,7 @@
     <#if footerHtml>
         <footer>
             <div class="pull-right">
-                Copyright © 2018-${.now?string('yyyy')} <a href="https://www.zhyd.me" target="_blank">yadong.zhang</a> · Powered by <a href="https://gitee.com/yadong.zhang/DBlog" title="OneBlog是一款简洁美观、自适应的Java博客系统..." target="_blank"><strong>OneBlog</strong></a>. All Rights Reserved.
+                Copyright © 2018-${.now?string('yyyy')} <a href="#" target="_blank">Alex</a> · Powered by <a href="#" title="怀念时光" target="_blank"><strong>怀念时光</strong></a>. All Rights Reserved.
             </div>
             <div class="clearfix"></div>
         </footer>

@@ -15,7 +15,8 @@
 </head>
 
 <body class="login">
-<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     data-backdrop="static"
      data-keyboard="false">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -31,10 +32,12 @@
                                     </div>
                                 </#if>
                                 <div>
-                                    <input type="text" class="form-control" placeholder="请输入用户名" name="username" required=""/>
+                                    <input type="text" class="form-control" placeholder="请输入用户名" name="username"
+                                           required=""/>
                                 </div>
                                 <div>
-                                    <input type="password" class="form-control" placeholder="请输入密码" name="password" required=""/>
+                                    <input type="password" class="form-control" placeholder="请输入密码" name="password"
+                                           required=""/>
                                 </div>
                                 <#if enableKaptcha?exists && enableKaptcha>
                                     <div class="form-group col-xs-6" style="padding-left: 0px;">
@@ -60,7 +63,7 @@
                                     <div class="clearfix"></div>
                                     <div>
                                         <h1><i class="fa fa-coffee"></i> ${config.siteName}管理系统</h1>
-                                        <p>Copyright © 2018 <a href="https://www.zhyd.me" target="_blank" style="margin: 0">yadong.zhang</a>. All Rights Reserved. </p>
+                                        <p>Copyright © 2019 <a href="#" target="_blank" style="margin: 0">Alex</a>. All Rights Reserved.</p>
                                     </div>
                                 </div>
                             </form>
@@ -91,7 +94,7 @@
                 if (json.status == 200) {
                     var historyUrl = json.data || "/";
                     window.location.href = historyUrl;
-                }else{
+                } else {
                     $.alert.error(json.message);
                     $("#img-kaptcha").attr("src", '/getKaptcha?time=' + new Date().getTime());
                 }

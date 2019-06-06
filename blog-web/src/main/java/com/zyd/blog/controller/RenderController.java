@@ -28,7 +28,7 @@ import java.util.Map;
  *
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
  * @version 1.0
- * @website https://www.zhyd.me
+ * @website #
  * @date 2018/4/18 11:48
  * @since 1.0
  */
@@ -207,6 +207,18 @@ public class RenderController {
     public ModelAndView about() {
         return ResultUtil.view("about");
     }
+
+//
+//    /**
+//     * 去登录页面
+//     *
+//     * @return
+//     */
+//    @RequestMapping("/toLogin")
+//    @BussinessLog(value = "进入登录页", platform = PlatformEnum.WEB)
+//    public String toLogin() {
+//        return "login";
+//    }
 
     /**
      * 友情链接

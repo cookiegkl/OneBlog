@@ -72,9 +72,9 @@
 ## cat a > b - 将a文件内容合并到b文件中
 ## cat a >> b - 将a文件内容追加到b文件中
 
-cat ../../blog-web/src/main/resources/static/js/zhyd.core.js > zhyd.all.js
-cat ../../blog-web/src/main/resources/static/js/zhyd.js >> zhyd.all.js
-cat ../../blog-web/src/main/resources/static/js/zhyd.comment.js >> zhyd.all.js
+cat ../../blog-web/src/main/resources/static/js/blog.core.js > zhyd.all.js
+cat ../../blog-web/src/main/resources/static/js/blog.js >> zhyd.all.js
+cat ../../blog-web/src/main/resources/static/js/blog.comment.js >> zhyd.all.js
 java -jar yuicompressor-2.4.8.jar zhyd.all.js -o ../../blog-web/src/main/resources/static/js/zhyd.min.js --charset utf-8 --type js
 rm -f zhyd.all.js
 

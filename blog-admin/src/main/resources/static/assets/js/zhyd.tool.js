@@ -3,7 +3,7 @@
  * 项目工具类
  *
  * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @website https://www.zhyd.me
+ * @website #
  * @version 1.0
  * @date 2017-09-02
  * @since 1.0
@@ -137,7 +137,7 @@
                             // 图片懒加载
                             var $lazyImg = $("img.lazy-img");
                             $lazyImg.lazyload({
-                                placeholder : appConfig.cmsPath + "/assets/images/loading.gif",
+                                placeholder : appConfig.cmsPath + "http://localhost/blog/20190606171209389.jpg",
                                 effect: "fadeIn",
                                 threshold: 100
                             });
